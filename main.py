@@ -11,8 +11,11 @@ controller.add_task("Uloha 1")
 controller.add_task("Uloha 2")
 controller.add_task("Uloha 3")
 
-print("-----")
+print("------")
+
 controller.finish_task("Uloha 2")
-controller.finish_task("Uloha 4")
+controller.finish_task("Uloha 3")
 
 controller.finished_tasks()
+
+controller.delete_task("Uloha 1")

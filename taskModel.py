@@ -17,3 +17,9 @@ class TaskModel:
             if task.completed:
                 finished_task.append(task)
         return finished_task
+
+    def remove_task(self, task):
+        self.tasks.remove(task)
+
+    def get_tasks(self):
+        return self.tasks

@@ -18,3 +18,6 @@ class TaskView:
         print("Dokoncene ulohy:")
         for task in tasks:
             print(f"- {task.name}")
+
+    def removed_task(self, task):
+        print(f"Uloha s nazvom {task.name} bola zmazana zo systemu")

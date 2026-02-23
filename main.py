@@ -1,16 +1,18 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+from taskController import TaskController
+from taskModel import TaskModel
+from taskView import TaskView
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+model = TaskModel()
+view = TaskView()
+controller = TaskController(model, view)
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+controller.add_task("Uloha 1")
+controller.add_task("Uloha 2")
+controller.add_task("Uloha 3")
+
+print("-----")
+controller.finish_task("Uloha 2")
+controller.finish_task("Uloha 4")
+
+controller.finished_tasks()
